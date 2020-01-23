@@ -5,7 +5,7 @@ const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false)
 
   return (
-    <nav className="navbar is-primary is-fixed-top">
+    <nav className="navbar is-primary is-fixed-top is-paddingless">
       <div className="container">
         <div className="navbar-brand">
           <img src={logo} alt="general-assembly-logo" className="image is-64x64" />
@@ -18,7 +18,7 @@ const Navbar = () => {
             <span aria-hidden="true" />
           </span>
         </div>
-        <div className={`navbar-menu is-paddingless ${navOpen ? 'is-active' : ''}`} >
+        <div className={`navbar-menu ${navOpen ? 'is-active' : ''}`} >
           <div className="navbar-end">
             <div className="navbar-item has-dropdown is-hoverable">
               <a className="navbar-link">Meet our Grads</a>
