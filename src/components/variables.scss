@@ -1,0 +1,18 @@
+// VARIABLES
+
+@font-face {
+    font-family: Circular;
+    src: url("/static/fonts/CircularStd-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Cirular;
+    font-weight: bold;
+    src: url("/static/fonts/CircularStd-Bold.otf") format("opentype");
+}
+
+$primary: #1A1A1B;
+$body-background-color: $primary;
+$navbar-dropdown-arrow: $primary;
+$body-family: 'Circular', sans-serif;
+$title-color: #fff;
