@@ -8,9 +8,14 @@ const Navbar = () => {
     <nav className="navbar is-primary is-fixed-top is-paddingless">
       <div className="container">
         <div className="navbar-brand">
-          <img src={logo} alt="general-assembly-logo" className="image is-64x64" />
-          <span
+          <a href="/">
+            <img src={logo} alt="general-assembly-logo" className="image is-64x64" />
+          </a>
+          <span       
+            role="button"
+            tabIndex="0"
             onClick={() => setNavOpen(!navOpen)}
+            onKeyUp={() => setNavOpen(!navOpen)}
             className={`navbar-burger ${navOpen ? 'is-active' : ''}`}
           >
             <span aria-hidden="true" />
@@ -21,20 +26,20 @@ const Navbar = () => {
         <div className={`navbar-menu ${navOpen ? 'is-active' : ''}`} >
           <div className="navbar-end">
             <div className="navbar-item has-dropdown is-hoverable">
-              <a className="navbar-link">Meet our Grads</a>
+              <span role="button" className="navbar-link">Meet our Grads</span>
               <div className="navbar-dropdown">
-                <a className="navbar-item">
+                <a href="/sei" className="navbar-item">
                   SEI
                 </a>
-                <a className="navbar-item">
+                <a href="/uxdi" className="navbar-item">
                   UXDI
                 </a>
-                <a className="navbar-item">
-                  DSE
+                <a href="/dsi" className="navbar-item">
+                  DSI
                 </a>
               </div>
             </div>
-            <a className="navbar-item">Event Informtion</a>
+            <a href="info" className="navbar-item">Event Informtion</a>
           </div>
         </div>
       </div>
