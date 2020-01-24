@@ -8,10 +8,14 @@ p.footer-text {
   width: 100%;
 }
 
-div > div.navbar-menu {
+@media only screen and (max-width: $tablet) {
+  div > div.navbar-menu {
   background-color: $grey-darker;
-  a.navbar-item, a.navbar-link {
-    color: #fff;
-  }  
+    a.navbar-item, a.navbar-link {
+      color: #fff;
+    }  
+  }
 }
+
+
 
