@@ -15,6 +15,30 @@ div > div.navbar-menu {
   }  
 }
 
+div.student-image {
+  display: flex;
+  justify-content: center;
+}
+
+figure.image {
+  height: 300px;
+  width: 300px;
+}
+
+.image-border {
+  border: solid 5px; 
+}
+
+.uxdi {
+  border-color: orange;
+}
+.sei {
+  border-color: blue;
+}
+.dsi {
+  border-color: yellow;
+}
+
 @media only screen and (max-width: $desktop) {
   div > div.navbar-menu {
   background-color: $grey-darker;

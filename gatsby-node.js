@@ -1,6 +1,7 @@
 require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
 const axios = require('axios')
 const path = require('path')
+const _ = require('lodash')
 
 exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => {
 
@@ -35,4 +36,41 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
   })
 }
 
-// TODO make a graphql request to these newly created gatbsy nodes, and create a page for each one
+exports.createPages = async ({ actions, graphql }) => {
+  
+  const { createPage } = actions
+  
+  try {
+    const response = await graphql(`
+      {
+        allStudent {
+          edges {
+            node {
+              name
+              course
+              description
+              id
+              image
+              quote
+            }
+          }
+        }
+      }
+    `)
+    
+    const students = response.data.allStudent.edges
+
+    students.forEach(edge => {
+      const pagePath = `/${edge.node.course.toLowerCase()}/${_.kebabCase(edge.node.name)}`
+
+      createPage({
+        path: pagePath,
+        component: path.resolve(`src/components/student.js`),
+        context: edge.node
+      })
+
+    })
+  } catch (err) {
+    console.log(err)
+  }
+}

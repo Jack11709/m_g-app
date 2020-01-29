@@ -5,7 +5,7 @@ const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false)
 
   return (
-    <nav className="navbar is-primary is-fixed-top is-paddingless">
+    <nav className="navbar is-primary">
       <div className="container">
         <div className="navbar-brand">
           <a href="/">
