@@ -29,14 +29,37 @@ figure.image {
   border: solid 5px; 
 }
 
+.image-border-small {
+  border: solid 3px; 
+}
+
 .uxdi {
   border-color: orange;
 }
 .sei {
-  border-color: blue;
+  border-color: cyan;
 }
 .dsi {
   border-color: yellow;
+}
+
+.column {
+  p.subtitle , i {
+  color: $custom-text;
+  }
+}
+
+.profile-container {
+  padding-top: 10px;
+}
+
+section.section.profile-top {
+  padding-top: 1rem;
+}
+
+div.hero-body {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 @media only screen and (max-width: $desktop) {
@@ -45,6 +68,11 @@ figure.image {
     a.navbar-item, span.navbar-link {
       color: #fff;
     }  
+  }
+
+  .profile-container {
+    padding-top: 10px;
+    padding-bottom: 0;
   }
 }
 

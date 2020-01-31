@@ -12,9 +12,22 @@
 }
 
 $primary: #1A1A1B;
+$custom-text:  #a5aab8;
+$light-background: #363636;
 $body-background-color: $primary;
 $navbar-dropdown-arrow: #fff;
 $navbar-item-hover-color: $primary;
 $navbar-item-hover-background-color: $primary;
 // $body-family: 'Circular', sans-serif;
 $title-color: #fff;
+
+//footer overides
+$footer-background-color: $primary;
+$footer-padding: 0 0 1rem;
+
+// table overides
+$table-color: $custom-text;
+$table-background-color: $primary;
+
+// card ovverides
+$card-background-color: $light-background;

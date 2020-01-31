@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Footer = () => (
-  <footer className="navbar is-primary has-text-centered is-fixed-bottom">
+  <footer className="footer is-primary has-text-centered">
     <div className="container">
       <p className="subtitle is-6 footer-text">&copy; General Assembly 2020</p>
     </div>

@@ -48,10 +48,14 @@ exports.createPages = async ({ actions, graphql }) => {
             node {
               name
               course
-              description
+              headline
               id
               image
-              quote
+              skills
+              q1
+              a1
+              q2
+              a2
             }
           }
         }
@@ -69,6 +73,18 @@ exports.createPages = async ({ actions, graphql }) => {
         context: edge.node
       })
 
+    })
+
+    const availableCourses = [...new Set(students.map(edge => edge.node.course))]
+
+    availableCourses.forEach(course => {
+      const pagePath = `/${course.toLowerCase()}`
+
+      createPage({
+        path: pagePath,
+        component: path.resolve(`src/components/student-list.js`),
+        context: { students: students.filter(edge => edge.node.course === course) }
+      })
     })
   } catch (err) {
     console.log(err)
