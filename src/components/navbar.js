@@ -31,15 +31,15 @@ const Navbar = () => {
               <div className="navbar-dropdown">
                 <Link to="/sei" className="navbar-item">
                   <span className="course-logo sei-dot"></span>
-                  SEI
+                  Software Engineering
                 </Link>
                 <Link to="/uxdi" className="navbar-item">
                   <span className="course-logo uxdi-dot"></span>
-                  UXDI
+                  User Experience Desgin
                 </Link>
                 <Link to="/dsi" className="navbar-item">
                   <span className="course-logo dsi-dot"></span>
-                  DSI
+                  Data Science
                 </Link>
               </div>
             </div>
