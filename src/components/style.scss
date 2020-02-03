@@ -34,13 +34,13 @@ figure.image {
 }
 
 .uxdi {
-  border-color: orange;
+  border-color: $uxdi;
 }
 .sei {
-  border-color: cyan;
+  border-color: $sei;
 }
 .dsi {
-  border-color: yellow;
+  border-color: $dsi;
 }
 
 .column {
@@ -57,9 +57,31 @@ section.section.profile-top {
   padding-top: 1rem;
 }
 
+.course-description {
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+
 div.hero-body {
   padding-top: 0;
   padding-bottom: 0;
+}
+
+span.course-logo {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin-right: 10px;
+  &.sei-dot {
+    background-color: $sei;
+  }
+  &.uxdi-dot {
+    background-color: $uxdi;
+  }
+  &.dsi-dot {
+    background-color: $dsi;
+  }
 }
 
 @media only screen and (max-width: $desktop) {

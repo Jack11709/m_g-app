@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../images/logo.png'
+import { Link } from 'gatsby'
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false)
@@ -8,9 +9,9 @@ const Navbar = () => {
     <nav className="navbar is-primary is-fixed">
       <div className="container">
         <div className="navbar-brand">
-          <a href="/">
+          <Link to="/">
             <img src={logo} alt="general-assembly-logo" className="image is-64x64" />
-          </a>
+          </Link>
           <span       
             role="button"
             tabIndex="0"
@@ -28,18 +29,21 @@ const Navbar = () => {
             <div className="navbar-item has-dropdown is-hoverable">
               <span role="button" className="navbar-link">Meet our Grads</span>
               <div className="navbar-dropdown">
-                <a href="/sei" className="navbar-item">
+                <Link to="/sei" className="navbar-item">
+                  <span className="course-logo sei-dot"></span>
                   SEI
-                </a>
-                <a href="/uxdi" className="navbar-item">
+                </Link>
+                <Link to="/uxdi" className="navbar-item">
+                  <span className="course-logo uxdi-dot"></span>
                   UXDI
-                </a>
-                <a href="/dsi" className="navbar-item">
+                </Link>
+                <Link to="/dsi" className="navbar-item">
+                  <span className="course-logo dsi-dot"></span>
                   DSI
-                </a>
+                </Link>
               </div>
             </div>
-            <a href="info" className="navbar-item">Event Informtion</a>
+            <Link to="/info" className="navbar-item">Event Informtion</Link>
           </div>
         </div>
       </div>
