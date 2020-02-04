@@ -35,7 +35,7 @@ const Navbar = () => {
                 </Link>
                 <Link to="/uxdi" className="navbar-item">
                   <span className="course-logo uxdi-dot"></span>
-                  User Experience Desgin
+                  User Experience Design
                 </Link>
                 <Link to="/dsi" className="navbar-item">
                   <span className="course-logo dsi-dot"></span>
