@@ -8,6 +8,7 @@ const courseTitle = {
 }
 
 const Student = props => {
+  
   const { image, name, course, headline, skills, q1, a1, q2, a2 } = props.pageContext
 
   return (
@@ -24,7 +25,7 @@ const Student = props => {
               <div className="column is-half-desktop is-fullwidth-tablet is-fullwidth-mobile">
                 <p className="title has-text-centered-mobile">{name}</p>
                 <p className="subtitle has-text-centered-mobile">{courseTitle[course]}</p>
-                <p className="subtitle is-6 has-text-centered-mobile"><i>"{headline}"</i></p>
+                <p className="subtitle is-6 has-text-centered-mobile"><i>&quot{headline}&quot</i></p>
                 <p className="subtitle">Top skills:</p>
                 <table className="table is-bordered">
                   <tbody>
@@ -42,11 +43,11 @@ const Student = props => {
             <div className="columns">
               <div className="column is-half-desktop">
                 <p className="title is-6 has-text-centered-mobile">{q1}</p>
-                <p className="subtitle is-6 has-text-centered-mobile"><i>"{a1}"</i></p>
+                <p className="subtitle is-6 has-text-centered-mobile"><i>&quot{a1}&quot</i></p>
               </div>
               <div className="column is-fullwidth column is-half-desktop">
                 <p className="title is-6 has-text-centered-mobile">{q2}</p>
-                <p className="subtitle is-6 has-text-centered-mobile"><i>"{a2}"</i></p>
+                <p className="subtitle is-6 has-text-centered-mobile"><i>&quot{a2}&quot</i></p>
               </div>
             </div>
           </section>

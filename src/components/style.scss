@@ -4,6 +4,8 @@
 // Importing Bulma from node_modules
 @import '~bulma/bulma.sass';
 
+// TODO sort out these general oveerides for duplication, what can be refactored to bulma sass variable overwrites
+
 p.footer-text {
   width: 100%;
 }

@@ -4,11 +4,11 @@ import Navbar from './navbar.js'
 import Footer from './footer'
 
 const Layout = ({ children }) => (
-	<>
+  <>
     <Navbar />
-      {children}
+    {children}
     <Footer />
-	</>
-);
+  </>
+)
 
-export default Layout;
+export default Layout
