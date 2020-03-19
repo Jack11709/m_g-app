@@ -3,8 +3,8 @@ import { Link } from 'gatsby'
 import _ from 'lodash'
 
 const StudentCard = props => (
-  <Link to={`/${props.course.toLowerCase()}/${_.kebabCase(props.name)}`} >
-    <div className="column is-fullwidth-mobile">
+  <div className="column is-12-mobile is-6-tablet is-4-desktop">
+    <Link to={`/${props.course.toLowerCase()}/${_.kebabCase(props.name)}`}>
       <div className="card">
         <div className="card-content media">
           <figure className="media-left">
@@ -17,13 +17,13 @@ const StudentCard = props => (
               <p className="title is-6">{props.name}</p>
             </div>
             <div className="content">
-              <p className="title is-6">Table No: {props.id}</p>
+              <p className="subtitle is-6">Table {props.id} in room {props.location}</p>
             </div>
           </div>
         </div> 
       </div>
-    </div>
-  </Link>
+    </Link>
+  </div>
 )
 
 export default StudentCard

@@ -22,11 +22,11 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
 
   formattedData.forEach(student => {
     const studentNode = {
-      id : createNodeId(student.id),
+      id: createNodeId(student.id),
       parent: '__SOURCE__',
       internal: {
         type: 'student',
-        contentDigest: createContentDigest(student),
+        contentDigest: createContentDigest(student)
       },
       children: [],
       ...student
@@ -56,6 +56,7 @@ exports.createPages = async ({ actions, graphql }) => {
               a1
               q2
               a2
+              location
             }
           }
         }
@@ -69,7 +70,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
       createPage({
         path: pagePath,
-        component: path.resolve(`src/components/student.js`),
+        component: path.resolve('src/components/student.js'),
         context: edge.node
       })
 
@@ -82,7 +83,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
       createPage({
         path: pagePath,
-        component: path.resolve(`src/components/student-list.js`),
+        component: path.resolve('src/components/student-list.js'),
         context: { students: students.filter(edge => edge.node.course === course) }
       })
     })

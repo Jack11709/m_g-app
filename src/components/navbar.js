@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import logo from '../images/logo.png'
+import largeLogo from '../images/logo-large.png'
 import { Link } from 'gatsby'
+
+// TODO use the large logo on desktop and tablet screens
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false)
@@ -9,8 +12,9 @@ const Navbar = () => {
     <nav className="navbar is-primary is-fixed">
       <div className="container">
         <div className="navbar-brand">
-          <Link to="/">
-            <img src={logo} alt="general-assembly-logo" className="image is-64x64" />
+          <Link to="/" className="logo-container">
+            <img src={logo} alt="general-assembly-logo" className="image is-64x64 is-hidden-desktop is-hidden-tablet" />
+            <img src={largeLogo} alt="general-assembly-logo" className="image logo-brand is-hidden-mobile" />
           </Link>
           <span       
             role="button"

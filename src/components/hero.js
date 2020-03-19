@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Hero = () => (
-  <section className="hero is-fullheight-with-navbar">
+  <section className="hero is-fullheight">
     <div className="hero-body">
       <div className="container">
         <p className="title is-1">

@@ -16,13 +16,11 @@ const StudentList = props => {
     <Layout>
       <section className="section profile-top">
         <div className="container">
-          <div className="columns">
-            <div className="columns">
-              <div className="column is-fullwidth">
-                <section className="section course-description">
-                  <p className="title is-6">{courseData[props.path.replace('/', '')]}</p>
-                </section>
-              </div>
+          <div className="columns is-mobile is-multiline">
+            <div className="column is-12-mobile is-10-tablet is-offset-1-tablet">
+              <section className="course-description">
+                <p className="title is-6">{courseData[props.path.replace('/', '')]}</p>
+              </section>
             </div>
             {students.map(({ node }) => <StudentCard key={node.id} {...node}/>)}
           </div>

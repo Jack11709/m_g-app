@@ -60,7 +60,7 @@ section.section.profile-top {
 }
 
 .course-description {
-  padding-top: 1rem;
+  padding-top: 0;
   padding-bottom: 0;
 }
 
@@ -92,7 +92,7 @@ span.course-logo {
   background-color: $grey-darker;
     a.navbar-item, span.navbar-link {
       color: #fff;
-    }  
+    }
   }
 
   .profile-container {
@@ -102,4 +102,34 @@ span.course-logo {
 }
 
 
+@font-face {
+  font-family: Circular;
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/CircularStd-Black.otf") format("otf");
+  font-display: swap;
+}
+
+html,body {
+  font-family: Circular, sans-serif;
+}
+
+.logo-brand {
+  width: 250px;
+}
+
+a.logo-container {
+  display: flex;
+  align-items: center;
+}  
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
 
