@@ -1,0 +1,39 @@
+// fixing some bulma menu spacing issuses
+.menu-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-label:not(:last-child) {
+  margin-top: 1em;
+}
+
+img.image.ga-small-logo {
+  height: 72px;
+  width: 72px;
+}
+
+span.course-logo {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin-left: 10px;
+  &.sei-dot {
+    background-color: $sei;
+  }
+  &.uxdi-dot {
+    background-color: $uxdi;
+  }
+  &.dsi-dot {
+    background-color: $dsi;
+  }
+}
+
+// Hide burger icon at desktop size
+@media only screen and (min-width: $desktop) {
+  .bm-burger-button {
+    display: none;
+  }
+}

@@ -1,0 +1,27 @@
+@font-face {
+  font-family: Circular;
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/CircularStd-Black.otf") format("otf");
+  font-display: swap;
+}
+
+html,body {
+  font-family: Circular, sans-serif;
+}
+
+.uxdi {
+  border-color: $uxdi;
+}
+.sei {
+  border-color: $sei;
+}
+.dsi {
+  border-color: $dsi;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

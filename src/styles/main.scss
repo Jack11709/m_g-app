@@ -1,0 +1,51 @@
+// Importing variables
+@import './variables.scss';
+// Importing Bulma from node_modules
+@import '~bulma/bulma.sass';
+//  Imports
+@import './partials/global.scss';
+@import './partials/side-menu.scss';
+@import './partials/hero.scss';
+@import './partials/footer.scss';
+
+div.student-image {
+  display: flex;
+  justify-content: center;
+}
+
+figure.image {
+  height: 300px;
+  width: 300px;
+}
+
+.image-border {
+  border: solid 5px; 
+}
+
+.image-border-small {
+  border: solid 3px; 
+}
+
+.column {
+  p.subtitle , i {
+  color: $custom-text;
+  }
+}
+
+.profile-container {
+  padding-top: 10px;
+}
+
+section.section.profile-top {
+  padding-top: 1rem;
+}
+
+.course-description {
+  padding-top: 0;
+  padding-bottom: 0;
+  .course-headline {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}

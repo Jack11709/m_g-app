@@ -1,10 +1,13 @@
 import React from 'react'
-import './style.scss'
-import Navbar from './navbar.js'
+import '../styles/main.scss'
+import Navbar from './navbar'
 import Footer from './footer'
+import Menu from './menu'
+
 
 const Layout = ({ children }) => (
   <main>
+    <Menu />
     <Navbar />
     {children}
     <Footer />
