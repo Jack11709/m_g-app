@@ -1,6 +1,6 @@
 import React from 'react'
 import { slide as SlideMenu } from 'react-burger-menu'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
 const styles = {
   bmBurgerButton: {
@@ -50,6 +50,20 @@ const styles = {
 }
 
 const Menu = () => {
+
+  const data = useStaticQuery(graphql`
+    {
+      allCourse {
+        edges {
+          node {
+            course
+          }
+        }
+      }
+    }
+  `)
+
+  console.log(data)
   return (
     <SlideMenu
       styles={styles}
@@ -93,5 +107,6 @@ const Menu = () => {
     </SlideMenu>
   )
 }
+
 
 export default Menu

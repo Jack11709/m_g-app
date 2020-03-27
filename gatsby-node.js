@@ -34,6 +34,26 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
 
     createNode(studentNode)
   })
+
+  const availableCourses = formattedData.reduce((arr, curr) => {
+    if (arr.some(j => j === curr.course)) return arr
+    return [...arr, curr.course]
+  }, [])
+
+  availableCourses.forEach((course, i) => {
+    const courseNode = {
+      id: createNodeId(i),
+      parent: '__SOURCE__',
+      internal: {
+        type: 'course',
+        contentDigest: createContentDigest(course)
+      },
+      children: [],
+      course
+    }
+
+    createNode(courseNode)
+  })
 }
 
 exports.createPages = async ({ actions, graphql }) => {
